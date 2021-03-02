@@ -14,15 +14,15 @@ pipeline
     // }
     stages
     {
-        stage('checkout')
-        {
-            steps
-            {
-                echo 'checkout'
-                scm checkout
-            }
+        //stage('checkout')
+        //{
+          //  steps
+            //{
+              //  echo 'checkout'
+               // scm checkout
+            //}
             
-        }
+        //}
 
         stage('restore')
         {
@@ -80,7 +80,7 @@ pipeline
             steps
             {
                 echo 'build image'
-                bat 'docker build -t meenakshi_nagp_exam2:feature -f ./WebApplication2/Dockerfile ./WebApplication2'
+                bat 'docker build -t meenakshi_nagp_exam2:develop -f ./WebApplication2/Dockerfile ./WebApplication2'
             }
         }
 
@@ -90,7 +90,7 @@ pipeline
             {
                 echo 'remove container if exists'
                 powershell label : '', script : '''
-                $containerId = docker container ls -aq --filter=name=meenakshi_dotnet_f
+                $containerId = docker container ls -aq --filter=name=meenakshi_dotnet_c
                 if($containerId){
                     docker stop $containerId
                     docker rm $containerId
@@ -104,7 +104,7 @@ pipeline
             steps
             {
                 echo 'Run Image'
-                bat 'docker run --name meenakshi_dotnet_f -d -p 9090:8080 meenakshi_nagp_exam2:feature'
+                bat 'docker run --name meenakshi_dotnet_c -d -p 8081:8080 meenakshi_nagp_exam2:develop'
             }
         }
 
@@ -114,7 +114,7 @@ pipeline
             {
                 echo 'deployment'
                 withEnv(["KUBECONFIG=${kubeConfigPath}","helm=${helmConfigPath}"]){
-                    bat 'helm install nagp-exam-feature-deployment nagp-feature-chart --set replicas=1 --set image.repository=meenakshi_nagp_exam2:feature'
+                    bat 'helm install nagp-exam-develop-deployment nagp-develop-chart --set replicas=1 --set image.repository=meenakshi_nagp_exam2:develop'
                 }
             }
         }
