@@ -14,6 +14,7 @@ pipeline
     // }
     stages
     {
+<<<<<<< HEAD
         // stage('checkout')
         // {
         //     steps
@@ -23,6 +24,17 @@ pipeline
         //     }
             
         // }
+=======
+        //stage('checkout')
+        //{
+          //  steps
+            //{
+              //  echo 'checkout'
+               // scm checkout
+            //}
+            
+        //}
+>>>>>>> 974b97e56c8b41a04a0e0d4cd7af3b1de369480b
 
         stage('restore')
         {
