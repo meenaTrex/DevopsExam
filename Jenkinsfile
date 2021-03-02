@@ -14,15 +14,15 @@ pipeline
     // }
     stages
     {
-        stage('checkout')
-        {
-            steps
-            {
-                echo 'checkout'
-                scm checkout
-            }
+        //stage('checkout')
+        //{
+          //  steps
+            //{
+              //  echo 'checkout'
+               // scm checkout
+            //}
             
-        }
+        //}
 
         stage('restore')
         {
