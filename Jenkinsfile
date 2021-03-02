@@ -14,15 +14,15 @@ pipeline
     // }
     stages
     {
-        stage('checkout')
-        {
-            steps
-            {
-                echo 'checkout'
-                scm checkout
-            }
+        // stage('checkout')
+        // {
+        //     steps
+        //     {
+        //         echo 'checkout'
+        //         scm checkout
+        //     }
             
-        }
+        // }
 
         stage('restore')
         {
@@ -104,7 +104,7 @@ pipeline
             steps
             {
                 echo 'Run Image'
-                bat 'docker run --name meenakshi_dotnet_c -d -p 8080:8080 meenakshi_nagp_exam2:develop'
+                bat 'docker run --name meenakshi_dotnet_c -d -p 8081:8080 meenakshi_nagp_exam2:develop'
             }
         }
 
