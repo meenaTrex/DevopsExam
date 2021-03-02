@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\NAGP-Exam-2\\Devops\\git-code\\DevopsExam\\WebApplication2\\WebApplication2.csproj": {}
+    "D:\\NAGP-Exam-2\\Devops\\git-code\\DevopsExam\\WebApplication2\\WebApplication2.csproj": {}
   },
   "projects": {
-    "d:\\NAGP-Exam-2\\Devops\\git-code\\DevopsExam\\WebApplication2\\WebApplication2.csproj": {
+    "D:\\NAGP-Exam-2\\Devops\\git-code\\DevopsExam\\WebApplication2\\WebApplication2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\NAGP-Exam-2\\Devops\\git-code\\DevopsExam\\WebApplication2\\WebApplication2.csproj",
+        "projectUniqueName": "D:\\NAGP-Exam-2\\Devops\\git-code\\DevopsExam\\WebApplication2\\WebApplication2.csproj",
         "projectName": "WebApplication2",
-        "projectPath": "d:\\NAGP-Exam-2\\Devops\\git-code\\DevopsExam\\WebApplication2\\WebApplication2.csproj",
+        "projectPath": "D:\\NAGP-Exam-2\\Devops\\git-code\\DevopsExam\\WebApplication2\\WebApplication2.csproj",
         "packagesPath": "C:\\Users\\meenakshithukral\\.nuget\\packages\\",
-        "outputPath": "d:\\NAGP-Exam-2\\Devops\\git-code\\DevopsExam\\WebApplication2\\obj\\",
+        "outputPath": "D:\\NAGP-Exam-2\\Devops\\git-code\\DevopsExam\\WebApplication2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

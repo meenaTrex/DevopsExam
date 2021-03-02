@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nagp-exam-develop-deployment
+  labels:
+    app: dotnetdevelop
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: dotnetdevelop
+  template:
+    metadata:
+      labels:
+        app: dotnetdevelop
+    spec:
+      containers:
+        - name: dotnetdevelop
+          image: {{ .Values.image.repository }}
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dotnetdevelopservice
+  labels:
+    app: dotnetdevelop
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+      name: http
+  selector:
+    app: dotnetdevelop
